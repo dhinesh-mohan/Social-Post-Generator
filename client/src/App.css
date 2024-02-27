@@ -1,42 +1,117 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container {
+  min-height: 100vh;
+  margin-left: 22rem;
+  width: calc(100% - 22rem);
+  margin-top: 3rem;
+  position: fixed;
+  background-color: #ebecf0;
+}
+.home-inner {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 10rem);
+}
+.PreviewArea {
+  max-width: 48rem;
   padding: 2rem;
-  text-align: center;
+  width: 100%;
+  max-height: 25rem;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.snippet {
+  background-color: white;
+  max-width: 35rem;
+  border-radius: 10px;
+  padding: 0.9rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.snippetHeader {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.leftContent img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.snippetName {
+  display: flex;
+  flex-direction: column;
+}
+.snippetName p {
+  font-size: 0.8rem;
+  color: #666d71;
+}
+.leftContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rightContent img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+.snippetContent {
+  margin-top: 1rem;
+  max-height: 20rem;
+  font-size: 0.95rem;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: pre-wrap;
+  word-break: keep-all;
+}
+.snippetFooter {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #666d71;
+}
+.inputField {
+  border: 1px solid rgb(133, 133, 133, 0.2);
+  width: 100%;
+  height: 2rem;
+  border-radius: 8px;
+  font: inherit;
+  padding: 0.5rem;
+}
+textarea {
+  border: 1px solid rgb(133, 133, 133, 0.2);
+  width: 100%;
+  border-radius: 8px;
+  font: inherit;
+  padding: 0.5rem;
+  height: 10rem;
+  resize: none;
+}
+@media screen and (max-width: 480px) {
+  .home-container {
+    position: unset;
+    width: auto;
+    margin-left: 0;
+    min-height: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .home-inner {
+    padding: 10px;
+    height: calc(100vh - 17rem);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .PreviewArea {
+    padding: 1rem;
+    max-height: 23rem;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
